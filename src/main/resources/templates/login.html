@@ -31,14 +31,16 @@
                             Invalid username or password.
                         </div>
 
-                        <form th:action="@{/login}" method="post">
+                        <form th:action="@{/login}" method="post" th:object="${loginDTO}">
                             <div class="mb-3">
-                                <label for="username" class="form-label">Username / Email</label>
-                                <input type="text" id="username" name="username" class="form-control" required>
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" th:field="*{username}" id="username" name="username"
+                                       class="form-control" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" id="password" name="password" class="form-control" required>
+                                <input type="password" th:field="*{password}" id="password" name="password"
+                                       class="form-control" required>
                             </div>
 
                             <div class="mb-3 form-check">
