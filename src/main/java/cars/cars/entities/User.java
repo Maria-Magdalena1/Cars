@@ -44,5 +44,5 @@ public class User {
 
     private Boolean isActive = true;
 
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt;
 }
